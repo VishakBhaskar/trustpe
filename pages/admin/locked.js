@@ -54,7 +54,7 @@ export default function ShowLocked() {
     if (txn.verifyStatus == false) {
       return (
         <button
-          className="bg-transparent hover:bg-purple-900 text-gray-100 font-normal hover:text-white py-2 px-4 border border-white-500 hover:border-transparent rounded"
+          className="bg-transparent hover:bg-purple-900 text-gray-100 font-normal hover:text-white py-2 px-4 border border-white-500 hover:border-transparent rounded text-white"
           onClick={() => withdraw(txn)}
         >
           Withdraw
@@ -69,7 +69,7 @@ export default function ShowLocked() {
     if (txn.verifyStatus == false) {
       return (
         <button
-          className="bg-transparent hover:bg-purple-900 text-gray-100 font-normal hover:text-white py-2 px-4 border border-white-500 hover:border-transparent rounded"
+          className="bg-transparent hover:bg-purple-900 text-gray-100 font-normal hover:text-white py-2 px-4 border border-white-500 hover:border-transparent rounded text-white"
           onClick={() => verifyTx(txn.escrowAddress)}
         >
           Verify
@@ -165,8 +165,8 @@ export default function ShowLocked() {
               <div className="flex  w-full justify-between">
                 <div className="flex text-sm flex-col  ml-2 items-start justify-between">
                   <p className="dark:text-white"> {txn.escrowAddress} </p>
-                  <span className="text-gray-300">
-                    {showToken(txn.price.toString())} Tkns
+                  <span className="text-white">
+                    {showToken(txn.price.toString())} DAI
                   </span>
                 </div>
                 {renderWithdrawButton(txn)}

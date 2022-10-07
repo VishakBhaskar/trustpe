@@ -110,13 +110,13 @@ export default function ShowUnpaid() {
             <div className="flex items-center w-full justify-between">
               <div className="flex text-sm flex-col w-full ml-2 items-start justify-between">
                 <p className="dark:text-white">{txn.escrowAddress}</p>
-                <span className="text-gray-300">
+                <span className="text-gray-300 text-white">
                   {" "}
                   {showToken(txn.price.toString())} DAI
                 </span>
               </div>
               <button
-                className="bg-transparent hover:bg-purple-900 text-gray-100 font-normal hover:text-white py-2 px-4 border border-white-500 hover:border-transparent rounded"
+                className="bg-transparent hover:bg-purple-900 text-gray-100 font-normal hover:text-white py-2 px-4 border border-white-500 hover:border-transparent rounded text-white"
                 onClick={() => payTx(txn)}
               >
                 Pay

@@ -95,7 +95,7 @@ export default function ShowUnverifiedTx() {
               </div>
 
               <button
-                className="bg-transparent hover:bg-purple-900 text-gray-100 font-normal hover:text-white py-2 px-4 border border-white-500 hover:border-transparent rounded"
+                className="bg-transparent hover:bg-purple-900 text-gray-100 font-normal hover:text-white py-2 px-4 border border-white-500 hover:border-transparent rounded text-white"
                 onClick={() => verifyTx(txn.escrowAddress)}
               >
                 Verify

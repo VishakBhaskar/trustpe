@@ -55,7 +55,7 @@ export default function ShowPendingTx() {
     if (txn.approvedStatus == true) {
       return (
         <button
-          className="bg-transparent hover:bg-purple-900 text-gray-100 font-normal hover:text-white py-2 px-4 border border-white-500 hover:border-transparent w-full rounded"
+          className="bg-transparent hover:bg-purple-900 text-gray-100 font-normal hover:text-white py-2 px-4 border border-white-500 hover:border-transparent w-full rounded text-white"
           onClick={() => deliver(txn.escrowAddress)}
         >
           Deliver
@@ -101,7 +101,9 @@ export default function ShowPendingTx() {
           <div className="flex items-center mb-6 rounded justify-between">
             <div className="flex items-center w-full justify-between">
               <div className="flex text-sm flex-col w-full ml-2 items-start justify-between">
-                <p className="dark:text-white">No Pending transactions</p>
+                <p className="dark:text-white text-white">
+                  No Pending transactions
+                </p>
               </div>
             </div>
           </div>
@@ -121,8 +123,10 @@ export default function ShowPendingTx() {
           <div className="flex items-center mb-6 rounded justify-between">
             <div className="flex items-center w-full justify-between">
               <div className="flex text-sm flex-col w-full ml-2 items-start justify-between">
-                <p className="dark:text-white">{txn.escrowAddress}</p>
-                <span className="text-green-400 flex justify-end w-full">
+                <p className="dark:text-white text-white">
+                  {txn.escrowAddress}
+                </p>
+                <span className="text-green-400 flex justify-end w-full text-white">
                   {showToken(txn.price.toString())}
                 </span>
               </div>

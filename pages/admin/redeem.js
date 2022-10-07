@@ -43,8 +43,10 @@ export default function ShowPendingTx() {
     const connection = await web3Modal.connect();
     const provider = new ethers.providers.Web3Provider(connection);
     const signer = provider.getSigner();
+    const msgSender = await signer.getAddress();
     let daiPool = new ethers.Contract(daiPoolAddress, DaiPool.abi, signer);
-    await daiPool.withdrawAll();
+    const daibal = await daiPool.balanceOf(msgSender);
+    await daiPool.leave(daibal.toString());
   }
 
   function renderButton() {
